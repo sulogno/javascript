@@ -1,0 +1,103 @@
+/* Dice Roller Enhanced CSS */
+
+body {
+    background: linear-gradient(135deg, #f5e6dc, #e3c6b5);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#container {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    max-width: 500px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #5c4a3b;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    background-color: #d9987c;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #c86c58;
+    transform: translateY(-3px);
+}
+
+button:active {
+    background-color: #b85e4d;
+    transform: translateY(1px);
+}
+
+input {
+    font-size: 1.5rem;
+    width: 120px;
+    padding: 8px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+#Diceresult {
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #444;
+}
+
+#DiceImages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Base style for dice */
+#DiceImages img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: scale(0.8);
+    animation: popIn 0.4s ease forwards;
+}
+
+/* When hovered */
+#DiceImages img:hover {
+    transform: scale(1.05) rotate(3deg);
+    transition: transform 0.2s ease;
+}
+
+/* Fade + scale animation */
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
