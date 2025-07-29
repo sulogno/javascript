@@ -29,7 +29,7 @@ mybox.addEventListener("mouseover",event =>{
 mybox.addEventListener("mouseout",event =>{
 
         event.target.style.backgroundColor = "lightgreen";
-    event.target.textContent = "Click me 😊";
+    event.target.textContent = "Click here 😊";
 
 }
 )
